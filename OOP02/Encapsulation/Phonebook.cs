@@ -51,33 +51,79 @@ namespace OOP02.Encapsulation
 
         #region Getter - Setter
 
-        //public int GetPersonNumber(string PersonName)
-        //{
-        //    if(Names is not null && Numbers is not null)
-        //    {
-        //        for(int i = 0; i < Numbers.Length; i++)
-        //        {
-        //            if (Names[i] == PersonName)
-        //            {
-        //                return Numbers[i];
-        //            }
-        //        }
-        //    }
-        //    return -1;
-        //}
+        public int GetPersonNumber(string PersonName)
+        {
+            if (Names is not null && Numbers is not null)
+            {
+                for (int i = 0; i < Numbers.Length; i++)
+                {
+                    if (Names[i] == PersonName)
+                    {
+                        return Numbers[i];
+                    }
+                }
+            }
+            return -1;
+        }
 
-        //// Setter
+        // Setter
 
-        //public void SetPersonNumber(String personName , int NewNumber)
-        //{
-        //    if (Names is not null && Numbers is not null)
-        //        for (int i = 0; i < Names.Length; i++)
-        //            if (Names[i] == personName)
-        //            {
-        //                Numbers[i] = NewNumber;
-        //                break;
-        //            }
-        //}
+        public void SetPersonNumber(String personName, int NewNumber)
+        {
+            if (Names is not null && Numbers is not null)
+                for (int i = 0; i < Names.Length; i++)
+                    if (Names[i] == personName)
+                    {
+                        Numbers[i] = NewNumber;
+                        break;
+                    }
+        }
+        #endregion
+
+        #region Indexer
+
+        // Special Property
+
+        //1. Named With Keyword this 
+        //2. Can Take Parameter
+
+        // Note["Mohamed"]
+
+        public int this[string name]
+        {
+            get {
+                if (Names is not null && Numbers is not null)
+                {
+                    for (int i = 0; i < Numbers.Length; i++)
+                    {
+                        if (Names[i] == name)                       
+                            return Numbers[i];                        
+                    }
+                }
+                return -1;
+            }
+
+            set {
+                if (Names is not null && Numbers is not null)
+                    for (int i = 0; i < Names.Length; i++)
+                        if (Names[i] == name)
+                        {
+                            Numbers[i] = value;
+                            break;
+                        }
+            }
+        }
+
+
+        // 0 :: Waleed :: 123
+        public string this[int index] // Readonly Indexer
+        {
+            get
+            {
+
+                return $"{index} :: {Names[index]} :: {Numbers[index]}";
+            }
+        }
         #endregion
     }
 }
