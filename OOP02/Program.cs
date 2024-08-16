@@ -1,10 +1,12 @@
-﻿namespace OOP02
+﻿using OOP02.Encapsulation;
+
+namespace OOP02
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            #region Part 02 Encapsulation  
+            #region Encapsulation  
 
 
             //// Employee employee = new Employee(10 , "Waleed" , 21600);
@@ -51,6 +53,25 @@
             //Console.WriteLine("=================");
             //Console.WriteLine(employee1.Deduction); 
             #endregion
+            #endregion
+
+
+            #region Getter - Setter
+
+            Phonebook Note = new Phonebook(3);
+
+
+            Note.AddPerson(0, "Waleed", 123);
+            Note.AddPerson(1, "Mahmoud", 456);
+            Note.AddPerson(2, "Mohamed", 789);
+
+            int PhoneNumber = Note.GetPersonNumber("Mohamed"); //789
+
+            Console.WriteLine(PhoneNumber == -1 ? "Not Found" : PhoneNumber);
+
+            Note.SetPersonNumber("Mohamed", 999); // Set Number Using Setter Method
+
+            Console.WriteLine(Note.GetPersonNumber("Mohamed")); // Get Number Using Getter 
             #endregion
 
 
