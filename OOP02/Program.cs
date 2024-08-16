@@ -65,16 +65,29 @@ namespace OOP02
             Note.AddPerson(1, "Mahmoud", 456);
             Note.AddPerson(2, "Mohamed", 789);
 
-            int PhoneNumber = Note.GetPersonNumber("Mohamed"); //789
+            //int PhoneNumber = Note.GetPersonNumber("Mohamed"); //789
 
-            Console.WriteLine(PhoneNumber == -1 ? "Not Found" : PhoneNumber);
+            //Console.WriteLine(PhoneNumber == -1 ? "Not Found" : PhoneNumber);
 
-            Note.SetPersonNumber("Mohamed", 999); // Set Number Using Setter Method
+            //Note.SetPersonNumber("Mohamed", 999); // Set Number Using Setter Method
 
-            Console.WriteLine(Note.GetPersonNumber("Mohamed")); // Get Number Using Getter 
+            //Console.WriteLine(Note.GetPersonNumber("Mohamed")); // Get Number Using Getter 
             #endregion
 
+            #region Indexer
 
+            //Console.WriteLine(Note["Waleed"]); // Get Number Using Indexer [As A Getter]
+
+            //Note["Waleed"] = 666; // Set Number Using Indexer [As A Setter] 
+
+            //Console.WriteLine(Note["Waleed"]); // Get Number Using Indexer [As A Getter]
+
+            //for(int i = 0; i < Note.Size; i++)
+            //{
+            //    Console.WriteLine(Note[i]);
+            //}
+
+            #endregion
         }
     }
 }
