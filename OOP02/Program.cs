@@ -1,4 +1,5 @@
 ﻿using OOP02.Encapsulation;
+using OOP02.Inheritance;
 
 namespace OOP02
 {
@@ -114,6 +115,21 @@ namespace OOP02
             //Console.WriteLine("====================");
             //Car C3 = new Car(30);
             //Console.WriteLine(C3);
+
+            #endregion
+
+            #region Inheritance
+
+            Parent P = new Parent(1,2);
+
+
+            Console.WriteLine($"P = {P}"); // (1 , 2)
+            Console.WriteLine($"Product = {P.Product()}"); // 2
+
+            Child C = new Child(3, 4, 5);
+            Console.WriteLine($"C = {C}");
+            Console.WriteLine($"Product = {C.Product()}");
+
 
             #endregion
 
