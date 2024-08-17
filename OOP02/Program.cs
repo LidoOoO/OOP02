@@ -55,7 +55,6 @@ namespace OOP02
             #endregion
             #endregion
 
-
             #region Getter - Setter
 
             Phonebook Note = new Phonebook(3);
@@ -88,6 +87,37 @@ namespace OOP02
             //}
 
             #endregion
+
+            #region Class
+
+            ////Car C1 ;
+            //// Declare Reference From Type "Car"
+            //// Can Refer To An Object From Type "Car"
+            //// Or An Object From Class [Inheriting From Car]
+            //// CLR Will Allocate 4 Bytes For Reference "C1" At Stack
+            //// Zero bytes Allocate at heap
+
+            ////C1 = new Car();
+            //// New =>
+            //// 1. Allocate Required Bytes [16 Bytes] At Heap
+            //// 2. Initialize The Allocated Bytes With Default Value Of Datatype
+            //// 3. Call User defined Constructor [If Exists]
+            //// 4. Assign The Reference "C1" To Allocated Object At heap
+
+
+            //Car C1 = new Car(10 , "BMW" , 290);
+
+            //Console.WriteLine(C1);
+            //Console.WriteLine("====================");
+            //Car C2 = new Car(20, "BYD");
+            //Console.WriteLine(C2);
+            //Console.WriteLine("====================");
+            //Car C3 = new Car(30);
+            //Console.WriteLine(C3);
+
+            #endregion
+
+
         }
     }
 }
